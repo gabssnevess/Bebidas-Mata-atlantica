@@ -134,7 +134,7 @@ checkoutBtn.addEventListener('click', function() {
 
     // Enviando pro zap
     const cartItems = cart.map((item) => {
-        `${item.name} Quantidade: (${item.quantity}) Preço: ${item.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} | `
+        return `Item: ${item.name}, Quantidade: (${item.quantity}), Preço: ${item.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} | `
     }).join("");
     const message = encodeURIComponent(cartItems);
     const phone   = '31994525631';
